@@ -27,8 +27,15 @@ session_start();
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="./views/Inscription/inscription.php">Inscription</a></li>
                 <li><a href="./views/Connexion/connexion.php">Connexion</a></li>
-                <?php echo $_SESSION['pseudo'] ?>
-
+                <?php
+                if (isset($_SESSION['pseudo'])) {
+                    echo $_SESSION['pseudo'];
+                }
+                ?>
+                <?php if (isset($_SESSION['pseudo'])) {
+                    echo "<a href='./views/Connexion/deconnexion.php'>Deconnexion</a>";
+                }
+                ?>
             </ul>
         </nav>
     </div>
