@@ -23,13 +23,19 @@ session_start();
     $username = "root";
     $password = "root";
     try {
+
         //connexion a la base de donnée//
+
         $connexion = new PDO("mysql:host=$server;dbname=portfolio", $username, $password);
         $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $select = "SELECT * from user ";
         $data = $connexion->prepare($select);
         $data->execute();
+
         //selectionne toutes les données de la table user
+        foreach ($connexion->query($select) as $row) {
+
+
         foreach ($connexion->query($select) as $row) {
 
             if ($row['pseudo'] === $_POST['user'] && $row['mdp'] == md5($_POST['secure'])) {
@@ -37,12 +43,18 @@ session_start();
                 $_SESSION['pseudo'] = $_POST['user'];
                 header('Location:../../index.php');
             }
+
             //affecte la session a l'utilisateur si le champ saisie correspond a un utilisateur de la bdd//
+
         }
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
+
     //si echec alors retourn une erreur //
+
+
+
 
     ?>
 </body>
