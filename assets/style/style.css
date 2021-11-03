@@ -2,12 +2,13 @@ html{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+/* affectation du comportement du scroll */ 
 body{
     background-image: url("../images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
-}
+} /*definit le fond d'ecran et le style de police de la page*/
 div.propos>h1{
     text-align: center;
     color:red;
@@ -30,7 +31,7 @@ div.propos>h1{
        top:50px;
     }
     
-}
+}/* animation du titre */
 div.navigation{
     position: relative;
     font-size:18px;
@@ -40,7 +41,7 @@ div.navigation{
     border-radius: 10px;
     backdrop-filter: blur(10px);
     
-}
+}/* ajoute un effet de flou en arriere plan sur la barre de navigation*/
 div.navigation>.menu>i{
     position: relative;
     left:2vw;
@@ -49,7 +50,7 @@ div.navigation>.menu>i{
 div.navigation>.menu>ul>li{
     list-style:none;
     
-}
+}/* desactive les listes a puces*/
 div.navigation>.menu>ul{
     display: flex;
     justify-content: center;
