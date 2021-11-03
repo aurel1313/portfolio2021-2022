@@ -33,6 +33,7 @@
     $username = "root";
     $password = "root";
     try {
+        //connexion a la base//
         $connexion = new PDO("mysql:host=$server;dbname=portfolio", $username, $password);
         $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
