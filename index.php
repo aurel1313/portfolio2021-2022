@@ -23,6 +23,7 @@
                 <li><a href="">mes loisirs</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="./views/Inscription/inscription.php">Inscription</a></li>
+                <li><a href="./views/Connexion/connexion.php">Connexion</li>
 
             </ul>
         </nav>
